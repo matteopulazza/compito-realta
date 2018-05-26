@@ -2,29 +2,52 @@
 
 <html>
 
-	<head>
-		<meta charset="utf-8" />
-    		<meta name="format-detection" content="telephone=no" />
-    		<meta name="msapplication-tap-highlight" content="no" />
-    		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+<head>
+	<meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     
-    			<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-				<link rel="stylesheet" type="text/css" href="css/index.css" />
-			
-					<title>Offerta del giorno</title>
-	</head>
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+			<title>Offerta del giorno</title>
+</head>
 
-		<body>
-    			<div class="app">
-				<br><br>
-					<h1>Avrai uno sconto sull'articolo n°:<p id="demo"></p></h1>
-
-						<script>
-							document.getElementById("demo").innerHTML =
-							Math.floor((Math.random() * 500) + 1);
-						</script>
-				<br>
-					<p class="linkback"><a href="index.html" >Back</a></p>
-        		</div>
-		</body>
+<body>
+    <div class="app">
+	<br><br><br>
+		<a class="link" onclick="genera500()">Genera</a>
+	<br>
+		<p id="demo"></p>
+	<script>
+			function genera500()  //funzione che genera num. casuali da 1-500 al button onclick
+			{
+				document.getElementById("demo").innerHTML =
+				"Il tuo articolo in omaggio è il n°: " + Math.floor((Math.random() * 500) + 1);
+			}			
+	</script>
+			<br>
+	
+	<form name="genera">
+		Da articolo n°<input type="text" name="da" value="1"></input>
+			<br>
+		Ad articolo n°<input type="text" name="a" value="500"></input>
+			<br>
+		<a class="link" onclick="genera_min_max()">Genera</a>
+	</form>
+		
+		<p id="demo2">
+			<script>
+				function genera_min_max(min,max)
+				{	
+					var min = document.genera.da.value;
+					var max = document.genera.a.value;
+					var x = document.getElementById("demo2");
+					x.innerHTML = "Il tuo articolo in omaggio è il n°: " + Math.floor(Math.random() * (max - min)+ 1);
+				}
+			</script>
+		<br>
+			<p class="linkback"><a href="index.html" >Back</a></p>
+        </div>
+</body>
 </html>
