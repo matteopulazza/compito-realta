@@ -15,9 +15,8 @@
 
 <body>
     <div class="app">
-	<br><br><br>
+	<br><br>
 		<a class="link" onclick="genera500()">Genera</a>
-	<br>
 		<p id="demo"></p>
 	<script>
 			function genera500()  //funzione che genera num. casuali da 1-500 al button onclick
@@ -26,8 +25,7 @@
 				"Il tuo articolo in omaggio è il n°: " + Math.floor((Math.random() * 500) + 1);
 			}			
 	</script>
-			<br>
-	
+
 	<form name="genera">
 		Da articolo n°<input type="text" name="da" value="1"></input>
 			<br>
@@ -46,7 +44,7 @@
 					x.innerHTML = "Il tuo articolo in omaggio è il n°: " + Math.floor(Math.random() * (max - min)+ 1);
 				}
 			</script>
-		<br>
+
 			<p class="linkback"><a href="index.html" >Back</a></p>
         </div>
 </body>
