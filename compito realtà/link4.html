@@ -50,9 +50,8 @@
 							}
 						function genera_min_max() //genera numeri utilizzando due inputbox dando due valori: min e max
 						{	
-							var min = document.genera.da.value * 1;
-							var max = document.genera.a.value * 1;
-							alert(min);
+							min = document.genera.da.value * 1;
+							max = document.genera.a.value * 1;
 							var r = Math.floor(Math.random() * (max - min + 1)) + (min *1);
 							var x = document.getElementById("demo2");
 							x.innerHTML = "L'articolo in omaggio è il n°: " + r;
