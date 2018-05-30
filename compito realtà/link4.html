@@ -15,7 +15,7 @@
 
 		<body>
 			<div class="app"> 
-				<br><br>
+			<br><br>
 				<!--Funzione che genera num. casuali da 1-500 al button onclick//
 					
 					<a class="link" onclick="genera500()">Genera</a>
@@ -39,12 +39,14 @@
 		
 				<p id="demo2">
 					<script>
-						function genera_min_max(min,max) //genera numeri utilizzando due inputbox dando due valori: min e max
+						function genera_min_max() //genera numeri utilizzando due inputbox dando due valori: min e max
 						{	
-							var min = document.genera.da.value;
-							var max = document.genera.a.value;
+							var min = document.genera.da.value * 1;
+							var max = document.genera.a.value * 1;
+							alert(min);
+							var r = Math.floor(Math.random() * (max - min + 1)) + (min *1);
 							var x = document.getElementById("demo2");
-							x.innerHTML = "L'articolo in omaggio è il n°: " + Math.floor(Math.random() * (max - min)+ 1);
+							x.innerHTML = "L'articolo in omaggio è il n°: " + r;
 						}
 					</script>
 
